@@ -129,7 +129,7 @@ function EventsPage() {
       />
 
       <section className="container-page section-y">
-        <div className="relative mx-auto mb-12 w-full max-w-[989px] overflow-hidden">
+        <div className="relative mb-12 w-full overflow-hidden">
           <Carousel opts={{ loop: true, align: "center" }} className="overflow-hidden">
             <CarouselContent className="-ml-0">
               {eventSlides.map((slide) => {

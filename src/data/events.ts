@@ -90,8 +90,8 @@ export const upcomingEvents: UpcomingEvent[] = [
     bannerImage: aiResilienceChallenge,
     bannerAlt:
       "An Evening of Learning & Inspiration — AI Resilience and DiscoverSTEM Innovation Day, Saturday October 3, 2026 at Hilton Richardson Dallas",
-    bannerWidth: 2560,
-    bannerHeight: 700,
+    bannerWidth: 2116,
+    bannerHeight: 743,
     pageHeroImage: salmaTauseefWomanOfTheYear,
     pageHeroAlt:
       "Official Event Flyer — An Evening of Learning & Inspiration: AI Resilience and DiscoverSTEM Innovation Day",
