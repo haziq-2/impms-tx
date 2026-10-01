@@ -235,7 +235,7 @@ function EventsPage() {
                           </span>
                         )}
                         {e.schedule.babysitting && (
-                          <span className="inline-flex items-center gap-1 rounded-md border border-gold/40 bg-gold/15 px-2.5 py-1 font-semibold text-gold">
+                          <span className="inline-flex items-center gap-1 rounded-md border border-border bg-secondary px-2.5 py-1 text-muted-foreground">
                             <Baby className="h-3.5 w-3.5 text-gold" />
                             Babysitting Available
                           </span>

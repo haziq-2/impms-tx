@@ -277,7 +277,7 @@ Thank you,
                       </span>
                     )}
                     {schedule.babysitting && (
-                      <span className="inline-flex items-center gap-1.5 rounded-lg border border-gold/40 bg-gold/15 px-3 py-1.5 font-semibold text-gold shadow-sm backdrop-blur-sm">
+                      <span className="inline-flex items-center gap-1.5 rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-3 py-1.5 backdrop-blur-sm">
                         <Baby className="h-4 w-4 text-gold" />
                         Babysitting Available
                       </span>
@@ -519,59 +519,19 @@ Thank you,
                 </div>
               )}
 
-              {/* Babysitting Option Card - Specially Highlighted */}
+              {/* Babysitting */}
               {schedule.babysitting && (
-                <div className="flex items-start gap-3.5 rounded-2xl border-2 border-gold/40 bg-card p-4 shadow-sm ring-2 ring-gold/20 transition-all hover:border-gold hover:shadow-md">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary text-gold">
+                <div className="flex items-start gap-3.5 rounded-2xl border border-border bg-card p-4 shadow-sm transition-all hover:border-gold/30 hover:shadow-md">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground">
                     <Baby className="h-5 w-5" />
                   </span>
                   <div className="min-w-0">
-                    <div className="flex items-center gap-1.5">
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Babysitting</p>
-                      <span className="rounded bg-gold/15 px-1.5 py-0.2 text-[10px] font-bold text-gold">Free</span>
-                    </div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">Babysitting</p>
                     <p className="mt-1 text-sm font-semibold leading-snug text-foreground">Available On-Site</p>
                     <p className="mt-0.5 text-xs text-muted-foreground">Request with RSVP</p>
                   </div>
                 </div>
               )}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Dedicated Babysitting & Family Care Feature Banner */}
-      {schedule?.babysitting && (
-        <section className="border-b border-border bg-gradient-to-r from-gold/10 via-background to-gold/10">
-          <div className="container-page py-6">
-            <div className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-gold/30 bg-card p-5 shadow-sm sm:flex-row sm:items-center sm:p-6">
-              <div className="flex items-start gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gold/15 text-gold ring-1 ring-gold/30">
-                  <Baby className="h-6 w-6" />
-                </span>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-base font-bold text-foreground sm:text-lg">
-                      Complimentary On-Site Babysitting Available
-                    </h3>
-                    <Badge variant="outline" className="border-gold/40 bg-gold/10 text-gold text-xs">
-                      Family Friendly
-                    </Badge>
-                  </div>
-                  <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                    To support families and working parents, vetted professional child care will be provided on-site at no cost throughout the entire program. Please indicate the number of children and their ages when confirming your RSVP so that trained caregivers and activities can be prepared.
-                  </p>
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                className="shrink-0 cursor-pointer border-gold/40 bg-gold/5 text-foreground hover:bg-gold/15"
-                onClick={() => setIsRsvpOpen(true)}
-              >
-                <Baby className="h-4 w-4 text-gold" />
-                Request Childcare
-              </Button>
             </div>
           </div>
         </section>
@@ -840,34 +800,13 @@ Thank you,
                 return (
                   <div
                     key={index}
-                    className={`flex items-start gap-4 rounded-2xl border p-5 shadow-sm transition-all ${
-                      isBabysittingLine
-                        ? "border-gold/50 bg-card ring-2 ring-gold/20"
-                        : "border-border bg-card"
-                    }`}
+                    className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:border-gold/30 hover:shadow-md"
                   >
-                    <span
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                        isBabysittingLine
-                          ? "bg-gold text-gold-foreground"
-                          : "bg-secondary text-foreground"
-                      }`}
-                    >
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-foreground">
                       <Icon className="h-5 w-5" />
                     </span>
                     <div className="min-w-0">
-                      {isBabysittingLine && (
-                        <span className="inline-block rounded bg-gold/15 px-2 py-0.5 text-xs font-bold text-gold">
-                          Family Amenity
-                        </span>
-                      )}
-                      <p
-                        className={`text-sm leading-relaxed ${
-                          isBabysittingLine
-                            ? "mt-1 font-medium text-foreground"
-                            : "text-muted-foreground"
-                        }`}
-                      >
+                      <p className="text-sm leading-relaxed text-muted-foreground">
                         {detail}
                       </p>
                     </div>
