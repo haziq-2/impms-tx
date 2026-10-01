@@ -20,6 +20,9 @@ export interface EventSchedule {
   venue?: string;
   venueAddress?: string;
   dinner?: string;
+  dressCode?: string;
+  babysitting?: string;
+  parking?: string;
 }
 
 export interface EventSpeaker {
@@ -46,6 +49,8 @@ export interface UpcomingEvent {
   icon: UpcomingEventIcon;
   bannerImage: string;
   bannerAlt: string;
+  bannerWidth?: number;
+  bannerHeight?: number;
   pageHeroImage?: string;
   pageHeroAlt?: string;
   pageHeroWidth?: number;
@@ -59,6 +64,11 @@ export interface UpcomingEvent {
   registrationPrompt?: string;
   ticketNote?: string;
   audiences?: EventAudience[];
+  partnerName?: string;
+  partnerTagline?: string;
+  contactPhone?: string;
+  contactEmail?: string;
+  mapQuery?: string;
 }
 
 export interface PastEvent {
@@ -73,89 +83,104 @@ export const upcomingEvents: UpcomingEvent[] = [
   {
     slug: "ai-resilience",
     title: "An Evening of Learning & Inspiration",
-    subtitle: "AI Resilience",
+    subtitle: "AI Resilience: The Edge That Keeps You Ahead",
     tagline: "Two Powerful Programs, One Impactful Evening",
     status: "By Invitation Only",
     icon: "brain",
     bannerImage: aiResilienceChallenge,
     bannerAlt:
       "An Evening of Learning & Inspiration — AI Resilience and DiscoverSTEM Innovation Day, Saturday October 3, 2026 at Hilton Richardson Dallas",
+    bannerWidth: 2560,
+    bannerHeight: 700,
     pageHeroImage: salmaTauseefWomanOfTheYear,
     pageHeroAlt:
-      "An Evening of Learning & Inspiration — AI Resilience and DiscoverSTEM Innovation Day flyer",
+      "Official Event Flyer — An Evening of Learning & Inspiration: AI Resilience and DiscoverSTEM Innovation Day",
     pageHeroWidth: 791,
     pageHeroHeight: 1024,
     hideDetailBanner: true,
+    partnerName: "discoverSTEM",
+    partnerTagline: "Innovation Quotient is the new IQ",
+    contactPhone: "(469) 209-5990",
+    contactEmail: "info@impmstx.org",
+    mapQuery: "Hilton Richardson Dallas, 701 E Campbell Rd, Richardson, TX 75081",
     description:
-      "IMPMS and discoverSTEM jointly present an evening of learning and inspiration. Part One features AI Resilience: The Edge That Keeps You Ahead, with keynote speaker Dr. Tauseef Salma. Part Two is DiscoverSTEM Innovation Day, including patent certificate presentations and America's Top Young Innovators Awards.",
+      "IMPMS and discoverSTEM jointly present an extraordinary evening of learning and inspiration. Part One features AI Resilience: The Edge That Keeps You Ahead with keynote speaker Dr. Tauseef Salma, exploring leadership and innovation in an AI-accelerated era. Part Two celebrates DiscoverSTEM Innovation Day, featuring patent certificate presentations and America's Top Young Innovators Awards.",
     schedule: {
       date: "Saturday, October 3, 2026",
-      time: "5:30 PM – 9:30 PM",
+      time: "5:30 PM – 9:30 PM CDT",
       venue: "Hilton Richardson Dallas",
       venueAddress: "701 E Campbell Rd, Richardson, TX 75081",
-      dinner: "Dinner included",
+      dinner: "Dinner included (Seated banquet with halal & vegetarian options)",
+      dressCode: "Business casual or traditional attire",
+      babysitting: "Complimentary on-site babysitting available — please request upon RSVP",
+      parking: "Complimentary self-parking on-site at Hilton Richardson Dallas",
     },
     keynote: {
       name: "Dr. Tauseef Salma",
       title: "Former Chief Technology Officer at Johnson Matthey",
-      award: "Woman of the Year 2024 — Women in Chemicals",
+      award: "Woman of the Year 2024 — Recognized by Women in Chemicals (WIC)",
       image: salmaTauseefPortrait,
       imageAlt: "Dr. Tauseef Salma, keynote speaker",
-      bio: "Tauseef’s leadership, innovative vision, and dedication to advancing women in the chemicals industry have made her a true trailblazer. Her journey of perseverance and excellence has inspired so many and her extraordinary contributions have shaped the industry.",
+      bio: "Dr. Tauseef Salma is an acclaimed technology executive and researcher whose leadership, innovative vision, and dedication to advancing women in STEM have made her an inspiring industry trailblazer. Formerly Chief Technology Officer at Johnson Matthey, Dr. Salma has spearheaded breakthrough innovations across material science, chemical technologies, and executive innovation strategy. Honored as the 2024 Woman of the Year by Women in Chemicals (WIC), her journey of perseverance and excellence inspires innovators across scientific and industrial disciplines.",
     },
-    focusLabel: "Evening Program",
+    focusLabel: "Dual Evening Programs",
     themes: [
       {
         icon: "brain",
-        title: "Part One: AI Resilience",
-        text: "The Edge That Keeps You Ahead — a keynote with Dr. Tauseef Salma on resilience, leadership, and staying ahead in an AI-driven world.",
+        title: "Part One: AI Resilience — The Edge That Keeps You Ahead",
+        text: "Keynote address with Dr. Tauseef Salma examining strategic resilience, technological leadership, and staying competitive in an AI-driven era, presented alongside the Healthcare AI Innovation Challenge.",
       },
       {
         icon: "sparkles",
         title: "Part Two: DiscoverSTEM Innovation Day",
-        text: "Patent certificate presentations and America's Top Young Innovators Awards celebrating emerging talent.",
+        text: "Celebrating student inventors and breakthrough thinkers through official Patent Certificate Presentations and America's Top Young Innovators Awards.",
       },
       {
         icon: "lightbulb",
-        title: "Joint Partnership",
-        text: "Presented jointly by IMPMS and discoverSTEM — connecting scholarship, science, and the next generation of innovators.",
+        title: "Joint Vision: Heritage Meets Future Innovation",
+        text: "IMPMS and discoverSTEM unite to connect the golden legacy of scientific inquiry with the next generation of youth patent holders, scientists, and problem-solvers.",
       },
     ],
     audiences: [
       {
         title: "Healthcare Professionals",
         description:
-          "Engage with ideas at the intersection of AI, resilience, and the future of healthcare leadership.",
+          "Physicians, clinical researchers, and healthcare executives exploring AI integration, ethics, and the future of healthcare innovation.",
       },
       {
-        title: "Students",
+        title: "Students & Young Innovators",
         description:
-          "Learn from industry leaders and celebrate young innovators recognized for patent-worthy work.",
+          "High school and collegiate innovators seeking STEM mentorship, patent pathways, and inspiration from proven trailblazers.",
       },
       {
-        title: "Researchers",
+        title: "Researchers & Academics",
         description:
-          "Connect with peers exploring AI, science, and innovation across academic and applied settings.",
+          "Scholars connecting scientific heritage with applied artificial intelligence, materials science, and interdisciplinary research.",
       },
       {
-        title: "Technology Leaders",
+        title: "Technology Leaders & Executives",
         description:
-          "Explore how AI resilience and innovation culture keep organizations ahead of change.",
+          "CTOs, engineering directors, and technology strategists seeking actionable insights on AI disruption, resilience, and organizational excellence.",
       },
       {
-        title: "Entrepreneurs",
+        title: "Entrepreneurs & Inventors",
         description:
-          "Meet innovators, educators, and partners advancing new ideas in science, medicine, and technology.",
+          "Founders, startup creators, and patent holders looking to commercialize novel concepts and network with fellow innovators.",
       },
       {
-        title: "Educators",
+        title: "Educators & Mentors",
         description:
-          "Support and inspire the next generation through DiscoverSTEM awards, patents, and shared learning.",
+          "Teachers, professors, and academic mentors dedicated to fostering youth curiosity, patenting, and STEM excellence.",
       },
     ],
     details: [
-      "Presented jointly by IMPMS and discoverSTEM.",
-      "Admission is by invitation only.",
+      "Admission: By invitation only. If you have received an invitation, please confirm your attendance. If you represent an organization or have not received your invitation, please contact IMPMS.",
+      "Babysitting Option: Complimentary on-site babysitting is provided for families with young children throughout the event. Please indicate your need and child ages when confirming your RSVP so dedicated caregivers can be arranged.",
+      "Dinner: Seated dinner is included for all confirmed attendees. Halal, vegetarian, and dietary accommodations are available upon advance notification.",
+      "Dress Code: Business casual or traditional attire is warmly recommended for this special evening.",
+      "Venue & Parking: Complimentary self-parking is available directly on-site at the Hilton Richardson Dallas (701 E Campbell Rd, Richardson, TX 75081).",
+      "Event Inquiries: For questions, table reservations, or invitation inquiries, contact the IMPMS team at (469) 209-5990 or email info@impmstx.org.",
+      "Nonprofit Status: IMPMS is a 501(c)(3) nonprofit organization advancing scholarship, innovation, and public dialogue since 2001.",
     ],
   },
   {

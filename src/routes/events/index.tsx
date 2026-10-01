@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  Baby,
   BookOpen,
   Brain,
   Building2,
@@ -11,6 +12,7 @@ import {
   GraduationCap,
   Handshake,
   Landmark,
+  MapPin,
   Mic,
   PartyPopper,
   Rocket,
@@ -218,6 +220,28 @@ function EventsPage() {
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                       {e.description}
                     </p>
+                    {e.schedule && (
+                      <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium">
+                        {e.schedule.date && (
+                          <span className="inline-flex items-center gap-1 rounded-md border border-border bg-secondary px-2.5 py-1 text-foreground">
+                            <Calendar className="h-3.5 w-3.5 text-gold" />
+                            {e.schedule.date}
+                          </span>
+                        )}
+                        {e.schedule.venue && (
+                          <span className="inline-flex items-center gap-1 rounded-md border border-border bg-secondary px-2.5 py-1 text-muted-foreground">
+                            <MapPin className="h-3.5 w-3.5 text-gold" />
+                            {e.schedule.venue}
+                          </span>
+                        )}
+                        {e.schedule.babysitting && (
+                          <span className="inline-flex items-center gap-1 rounded-md border border-gold/40 bg-gold/15 px-2.5 py-1 font-semibold text-gold">
+                            <Baby className="h-3.5 w-3.5 text-gold" />
+                            Babysitting Available
+                          </span>
+                        )}
+                      </div>
+                    )}
                     {e.details && (
                       <ul className="mt-4 space-y-2">
                         {e.details.slice(0, 2).map((detail) => (
